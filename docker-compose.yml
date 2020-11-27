@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app:
+    build: .
+    ports:
+      - 3010:80
+    environment: &env
+      MYSQL_HOST: mariadb
+      MYSQL_ROOT_PASSWORD: changeme
+      MYSQL_DATABASE: bsup
+      MYSQL_USER: gestsup
+      MYSQL_PASSWORD: changeme
+  mariadb:
+    image: mariadb:10.2
+    environment:
+      <<: *env
+    restart: on-failure
+    volumes:
+      - mariadb-volume:/var/lib/mysql
+volumes:
+  mariadb-volume:
