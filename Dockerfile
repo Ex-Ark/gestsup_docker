@@ -11,9 +11,8 @@ RUN unzip /var/www/html/gestsup_$GESTSUP_VERSION.zip -d /var/www/html
 
 RUN rm /var/www/html/gestsup_$GESTSUP_VERSION.zip
 RUN rm -rf /var/www/html/index.html
-RUN rm -rf /var/www/html/install
 
-COPY connect.php /var/www/html
+#COPY connect.php /var/www/html
 
 RUN adduser gestsup --ingroup www-data
 RUN chown -R gestsup:www-data /var/www/html
