@@ -10,6 +10,8 @@ services:
       MYSQL_DATABASE: bsup
       MYSQL_USER: gestsup
       MYSQL_PASSWORD: changeme
+    volumes:
+      - app-volume:/var/www/html
   mariadb:
     image: mariadb:10.2
     environment:
@@ -19,3 +21,4 @@ services:
       - mariadb-volume:/var/lib/mysql
 volumes:
   mariadb-volume:
+  app-volume:
