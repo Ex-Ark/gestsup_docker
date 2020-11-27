@@ -1,17 +1,14 @@
 version: "3"
 services:
   app:
-    build:
-      context: .
-      args: &env
-        MYSQL_HOST: mariadb
-        MYSQL_DATABASE: bsup
-        MYSQL_USER: gestsup
-        MYSQL_PASSWORD: changeme
+    build: .
     ports:
       - 3010:80
-    environment:
-      <<: *env
+    environment: &env
+      MYSQL_HOST: mariadb
+      MYSQL_DATABASE: bsup
+      MYSQL_USER: gestsup
+      MYSQL_PASSWORD: changeme
     depends_on:
       - mariadb
     volumes:
