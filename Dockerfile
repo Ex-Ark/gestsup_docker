@@ -10,7 +10,7 @@ RUN wget -P /var/www/html https://gestsup.fr/downloads/versions/current/stable/g
 RUN unzip /var/www/html/gestsup_$GESTSUP_VERSION.zip -d /var/www/html
 
 RUN rm /var/www/html/gestsup_$GESTSUP_VERSION.zip
-RUN rm -rf /var/www/html/index.html
+RUN rm /var/www/html/index.html
 
 #COPY connect.php /var/www/html
 
@@ -24,6 +24,6 @@ RUN chmod 770 -R /var/www/html/images/model
 RUN chmod 770 -R /var/www/html/log
 RUN chmod 770 -R /var/www/html/backup
 RUN chmod 770 -R /var/www/html/_SQL
-RUN chmod 640 /var/www/html/connect.php
+RUN chmod 660 /var/www/html/connect.php
 
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
