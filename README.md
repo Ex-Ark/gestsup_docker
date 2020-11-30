@@ -32,8 +32,8 @@ Accordingly, volumes data can be found on the host machine there :
 
 | OS  | Container | Volume location |         
 | :---------------: | :-----:| :-----:|
-| Windows(WSL)  |   app        | \\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes\gestsup_docker_app-volume\\_data  |
-| Windows(WSL)  |   mariadb             |   \\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes\gestsup_docker_mariadb-volume\\_data |
+| Windows(WSL)  |   app        | \\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes\gestsup_docker_app-volume\\_data  |
+| Windows(WSL)  |   mariadb             |   \\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes\gestsup_docker_mariadb-volume\\_data |
 | Unix  | app          |    /var/lib/docker/volumes/gestsup_docker_app-volume/_data |
 | Unix  | mariadb          |    //var/lib/docker/volumes/gestsup_docker_mariadb-volume/_data |
 
