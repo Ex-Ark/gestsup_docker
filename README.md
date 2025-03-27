@@ -6,7 +6,7 @@ No configuration whatsoever is required to get started, as opposed to the Gestsu
 
 It's as simple as :
 ```
-git pull https://github.com/Ex-Ark/gestsup_docker.git
+git clone https://github.com/Ex-Ark/gestsup_docker.git
 cd gestsup_docker
 docker-compose up --build
 ```
